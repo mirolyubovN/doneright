@@ -1,0 +1,62 @@
+{
+  "testPlan": [
+    {
+      "testScript": [
+         {
+          "testCase": {
+            "actionSteps": [
+              {"open": "https://www.qmul.ac.uk/"},
+              {"exec":"document.getElementById(\"query\").value=\"computer\";"},
+              {"getNode": "//*[@id=\"ug-search\"]/form/input[3], myButton"},
+              {"click":"myButton"}
+              ],
+            "assertEquals": [
+              {"opened": "yes"},
+              {"exec":"yes"},
+              {"myButton": "yes"},
+              {"click":"no"}
+              ]
+            }
+          },
+          {
+          "testCase": {
+            "actionSteps": [
+              {"open": "https://www.qmul.ac.uk/"},
+              {"exec":"document.getElementById(\"query\").value=\"computer\";"},
+              {"exec": "document.querySelector(\"#ug-search > form > input.contentSearchSubmit\").click();"}
+              ],
+            "assertEquals": [
+              {"opened": "yes"},
+              {"exec":"yes"},
+              {"exec":"yes"}
+              ]
+            }
+          }
+        ]
+        },
+
+    {
+      "testScript": [
+         {
+          "testCase": {
+            "actionSteps": [
+
+              {"open": "http://www.ng.kz/"},
+              {"getNode": "//*[@id=\"main-layout\"]/div[3]/div[5]/div[3]/div[2]/div[2]/form/div[2]/label/a, myButton"},
+              {"click":"myButton"},
+              {"getNode":"//*[@id=\"upload-button\"], myButtonTwo"},
+              {"click":"myButtonTwo"}
+              ],
+            "assertEquals": [
+              {"opened": "yes"},
+              {"myButton": "yes"},
+              {"click": "yes"},
+              {"myButtonTwo":"yes"},
+              {"click":"yes"}
+              ]
+            }
+          }
+        ]
+        }
+      ]
+    }

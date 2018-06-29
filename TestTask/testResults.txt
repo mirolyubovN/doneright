@@ -1,0 +1,104 @@
+MacBook-Pro-Nikita:TestTaks nikitamirolyubov$ python test.py plan.json plan.yaml
+Test file : plan.json
+Script # 1
+Starting the driver
+Driver launched
+Executing action :
+Opening website
+Executing action :
+Executing JS
+Executing action :
+Getting node
+Node : myButton
+Executing action :
+Initiating a click
+Clicking
+Expected: [{'opened': 'yes'}, {'exec': 'yes'}, {'myButton': 'yes'}, {'click': 'no'}]
+Results: [{'opened': 'yes'}, {'exec': 'yes'}, {'myButton': 'yes'}, {'click': 'no'}]
+Assertion passed
+Exited with exit code 0
+Starting the driver
+Driver launched
+Executing action :
+Opening website
+Executing action :
+Executing JS
+Executing action :
+Executing JS
+Expected: [{'opened': 'yes'}, {'exec': 'yes'}, {'exec': 'yes'}]
+Results: [{'opened': 'yes'}, {'exec': 'yes'}, {'exec': 'yes'}]
+Assertion passed
+Exited with exit code 0
+Script # 2
+Starting the driver
+Driver launched
+Executing action :
+Opening website
+Executing action :
+Getting node
+Node : myButton
+Executing action :
+Initiating a click
+Clicking
+Executing action :
+Getting node
+Node : myButtonTwo
+Executing action :
+Initiating a click
+Clicking
+Expected: [{'opened': 'yes'}, {'myButton': 'yes'}, {'click': 'yes'}, {'myButtonTwo': 'yes'}, {'click': 'yes'}]
+Results: [{'opened': 'yes'}, {'myButton': 'yes'}, {'click': 'yes'}, {'myButtonTwo': 'yes'}, {'click': 'yes'}]
+Assertion passed
+Exited with exit code 0
+Test file : plan.yaml
+Script # 1
+Starting the driver
+Driver launched
+Executing action :
+Opening website
+Executing action :
+Executing JS
+Executing action :
+Getting node
+Node : myButton
+Executing action :
+Initiating a click
+Clicking
+Expected: [{'opened': 'yes'}, {'exec': 'yes'}, {'myButton': 'yes'}, {'click': 'no'}]
+Results: [{'opened': 'yes'}, {'exec': 'yes'}, {'myButton': 'yes'}, {'click': 'no'}]
+Assertion passed
+Exited with exit code 0
+Starting the driver
+Driver launched
+Executing action :
+Opening website
+Executing action :
+Executing JS
+Executing action :
+Executing JS
+Expected: [{'opened': 'yes'}, {'exec': 'yes'}, {'exec': 'yes'}]
+Results: [{'opened': 'yes'}, {'exec': 'yes'}, {'exec': 'yes'}]
+Assertion passed
+Exited with exit code 0
+Script # 2
+Starting the driver
+Driver launched
+Executing action :
+Opening website
+Executing action :
+Getting node
+Node : myButton
+Executing action :
+Initiating a click
+Clicking
+Executing action :
+Getting node
+Node : myButtonTwo
+Executing action :
+Initiating a click
+Clicking
+Expected: [{'opened': 'yes'}, {'myButton': 'yes'}, {'click': 'yes'}, {'myButtonTwo': 'yes'}, {'click': 'yes'}]
+Results: [{'opened': 'yes'}, {'myButton': 'yes'}, {'click': 'yes'}, {'myButtonTwo': 'yes'}, {'click': 'yes'}]
+Assertion passed
+Exited with exit code 0
+MacBook-Pro-Nikita:TestTaks nikitamirolyubov$
