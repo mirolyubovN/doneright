@@ -8,8 +8,8 @@ from selenium.webdriver.chrome.options import Options
 # opening file and reading test plan
 def openFile(arg):
     with open(arg) as file:
-        # try:
-        if(str(arg).endswith('.json')):
+        try:
+            if(str(arg).endswith('.json')):
                 plan = json.load(file)
                 # print(plan)
         # elif (str(arg).endswith('.xml')):
@@ -24,16 +24,18 @@ def openFile(arg):
         #         plan=json.loads(json.dumps(plan))
         #         print("3")
         #         print(plan)
-        elif (str(arg).endswith('.yaml')):
+            elif (str(arg).endswith('.yaml')):
                 plan = yaml.load(file)
-        else:
-            print("Format not supported")
-            exit()
-        # except Exception:
-        #     print ("Could not open file")
-        #     exitCode = 1
-        #     print ("Exited with exit code " + str(exitCode))
-        #     exit(exitCode)
+            else:
+                print("Format not supported")
+                exitCode = 1
+                print("Exited with exit code " + str(exitCode))
+                exit(exitCode)
+        except Exception:
+            print ("Could not open file")
+            exitCode = 1
+            print ("Exited with exit code " + str(exitCode))
+            exit(exitCode)
         return plan
 
 # function that initiates a webdriver (Chrome in this case; the webdriver needs to be installed)
