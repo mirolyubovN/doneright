@@ -28,7 +28,7 @@ def openFile(arg):
                 plan = yaml.load(file)
             else:
                 print("Format not supported")
-                exitCode = 1
+                exitCode = 3
                 print("Exited with exit code " + str(exitCode))
                 exit(exitCode)
         except Exception:
