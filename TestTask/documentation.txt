@@ -6,6 +6,19 @@ To run the program: open terminal and type: python testfile1 testfile2 ... testf
 It will be producing output to the console and will exit with an exit code 0, 1, 2 or 3. 0 represents OK, 1 represents assertion error, 2 represents test file error, 3 represents file format not supported. 
 
 Test plan:
+Test scnario one 1: Search for courses contatining the word computer
+Steps: 1. Go to qmul site; 2.Input computer in the search box; 3.Press search
+Expected results: User should be able to see courses containing the word computer
+Result: As expected
+
+Test scenario 2: Search for courses contatining the word computer without any input to the search field
+Steps: 1. Go to qmul site; 2.Press search
+Expected results: User should not be able to press the search button
+Result: Fail
+Description: The search button is enable by default, no matter what the content of the search box is. However, pressing the button has no effect.
+
+
+
 The test plan provided is very basic, the first test script tries to search for modules containing the word "computer" on QMUL website, but fails to do so (succeeds if you manually scroll down the page). The second script, however, uses another method for searching for modules and succeeds in doing so. The second test script tries submitting an empty form and succeeds in doing so. Both JSON and YAML files contain the same tests.
 
 
