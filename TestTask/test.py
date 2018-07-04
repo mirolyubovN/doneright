@@ -144,11 +144,12 @@ def executeStep(actionStep):
 
 # check equality of two arrays
 def assertEquals(expectedResult, actualValue):
+    global exitCode
     if(expectedResults==actualValue):
         print("Assertion passed")
     else:
+        exitCode = 1
         print("Assertion failed")
-        exitCode=1
 
 arguments = iter(sys.argv)
 next(arguments)
